@@ -1,5 +1,5 @@
 # airbnb-clone-project
-## Team Roles and Responsibilities
+## Team Roles
 🔷 Backend Developer
 Focus: API endpoints, database models, and core business logic.
 
