@@ -1,76 +1,28 @@
-# airbnb-clone-project
-## Team Roles
-🔷 Backend Developer
-Focus: API endpoints, database models, and core business logic.
+🔐 API Security
+Securing the backend APIs is essential to protect sensitive user data, prevent unauthorized access, and ensure the integrity of financial transactions. The Airbnb Clone implements multiple layers of security to safeguard its system and users.
 
-Responsibilities:
+🔑 Authentication
+All users must authenticate using secure login credentials. JWT (JSON Web Tokens) or session-based authentication will be used to verify user identities before accessing protected endpoints.
 
-Implement RESTful (or GraphQL) APIs for:
+Why it matters: Ensures that only legitimate users can access their accounts and prevents impersonation or data breaches.
 
-User registration, login, profile management.
+🛡️ Authorization
+Role-based access control (RBAC) will be enforced to restrict access to specific resources. For instance, only hosts can create or modify properties, and only guests who made bookings can leave reviews.
 
-Property creation, update, retrieval.
+Why it matters: Prevents users from performing unauthorized actions and maintains data integrity across the platform.
 
-Booking creation and management.
+🚫 Rate Limiting
+The API will implement rate limiting to prevent abuse, such as brute-force login attempts or denial-of-service attacks. Throttling policies will restrict the number of requests per user/IP over a given time period.
 
-Review submission and retrieval.
+Why it matters: Protects the backend from spam, malicious traffic, and resource exhaustion.
 
-Payment initiation and confirmation.
+🔒 Data Encryption
+Sensitive data such as passwords and payment information will be encrypted at rest and in transit using HTTPS and secure hashing algorithms like bcrypt.
 
-Develop and enforce authentication and authorization (e.g., JWT, roles).
+Why it matters: Protects user credentials and financial data from being intercepted or leaked during communication or storage.
 
-Write validation logic, error handling, and controller logic for each feature.
+✅ Input Validation & Sanitization
+All inputs will be validated and sanitized to prevent injection attacks (e.g., SQL injection, XSS). DRF serializers and Django model constraints will enforce data integrity.
 
-Coordinate with frontend and QA for integration and issue resolution.
-
-🔷 Database Administrator (DBA)
-Focus: Schema design, indexing, query performance, data integrity.
-
-Responsibilities:
-
-Design normalized and scalable schemas for:
-
-Users, Properties, Bookings, Payments, Reviews.
-
-Set up and manage indexes on searchable fields (e.g., location, dates).
-
-Optimize slow queries and ensure efficient joins and transactions.
-
-Implement backups, migrations, and data lifecycle management.
-
-Monitor and tune database performance under load.
-
-🔷 DevOps Engineer
-Focus: Infrastructure, deployment, scaling, and observability.
-
-Responsibilities:
-
-Set up CI/CD pipelines (e.g., GitHub Actions, Jenkins) for backend services.
-
-Configure containerization (e.g., Docker) and orchestration (e.g., Kubernetes).
-
-Deploy backend to scalable environments (e.g., AWS, GCP, Heroku).
-
-Monitor services using tools like Prometheus, Grafana, or ELK stack.
-
-Manage environment variables, secrets, and rollback strategies.
-
-🔷 QA Engineer
-Focus: Functional testing, performance testing, and quality assurance.
-
-Responsibilities:
-
-Write and execute test cases for:
-
-API endpoints (using Postman, Jest, or Supertest).
-
-Authentication, booking flow, payment flow, etc.
-
-Automate regression and integration tests.
-
-Test edge cases and validate error responses.
-
-Report bugs and verify fixes with reproducible scenarios.
-
-Collaborate on defining acceptance criteria for each feature.
+Why it matters: Blocks common attack vectors that could compromise the system or corrupt the database.
 
